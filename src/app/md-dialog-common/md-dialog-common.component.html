@@ -1,0 +1,31 @@
+<h2 md-dialog-title>Do you like this kind of animal?</h2>
+<md-dialog-content class="example-dialog-content">
+  <!--card demo-->
+  <div>
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>Shiba Inu</md-card-title>
+        <md-card-subtitle>Dog Breed</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <md-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </md-card-content>
+      <!--<md-card-actions hidden>-->
+      <!--<button md-button>LIKE</button>-->
+      <!--<button md-button>SHARE</button>-->
+      <!--</md-card-actions>-->
+    </md-card>
+  </div>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-button md-dialog-close color="primary">HATE</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button md-button [md-dialog-close]="true">LIKE</button>
+</md-dialog-actions>
+

@@ -1,0 +1,117 @@
+import {NgModule, LOCALE_ID} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MdButtonModule,
+  MdCheckboxModule,
+  MdMenuModule,
+  MdAutocompleteModule,
+  MdSidenavModule,
+  MdTabsModule,
+  MdCardModule,
+  MdGridListModule,
+  MdIconModule,
+  MdDialogModule,
+  MdSelectModule,
+  MdTooltipModule,
+  MdRadioModule,
+  MdDatepickerModule,
+  DateAdapter,
+  NativeDateAdapter,
+  MdNativeDateModule,
+  MD_DATE_FORMATS,
+  MdInputModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdToolbarModule,
+  MdExpansionModule,
+  MdButtonToggleModule,
+  MdChipsModule,
+  MdProgressSpinnerModule,
+  MdProgressBarModule,
+  MdSnackBarModule,
+  MdTableModule,
+  MdSortModule,
+  MdPaginatorModule,
+} from '@angular/material';
+
+
+const MY_NATIVE_DATE_FORMATS = 'yy-mm-dd';
+
+@NgModule({
+  imports: [
+    BrowserAnimationsModule,
+    MdAutocompleteModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdMenuModule,
+    MdSidenavModule,
+    MdTabsModule,
+    MdCardModule,
+    MdGridListModule,
+    MdIconModule,
+    MdDialogModule,
+    MdSelectModule,
+    MdTooltipModule,
+    MdRadioModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdInputModule,
+    MdSliderModule,
+    MdSlideToggleModule,
+    MdToolbarModule,
+    MdExpansionModule,
+    MdButtonToggleModule,
+    MdChipsModule,
+    MdProgressSpinnerModule,
+    MdProgressBarModule,
+    MdSnackBarModule,
+    MdTableModule,
+    MdSortModule,
+    MdPaginatorModule,
+  ],
+  exports: [
+    BrowserAnimationsModule,
+    MdAutocompleteModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdMenuModule,
+    MdSidenavModule,
+    MdTabsModule,
+    MdCardModule,
+    MdGridListModule,
+    MdIconModule,
+    MdDialogModule,
+    MdSelectModule,
+    MdTooltipModule,
+    MdRadioModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
+    MdInputModule,
+    MdSliderModule,
+    MdSlideToggleModule,
+    MdToolbarModule,
+    MdExpansionModule,
+    MdButtonToggleModule,
+    MdChipsModule,
+    MdProgressSpinnerModule,
+    MdProgressBarModule,
+    MdSnackBarModule,
+    MdTableModule,
+    MdSortModule,
+    MdPaginatorModule,
+  ],
+  providers: [
+    {provide: DateAdapter, useClass: NativeDateAdapter},
+    // {provide: MD_DATE_FORMATS, useValue: MY_NATIVE_DATE_FORMATS},
+    {provide: LOCALE_ID, useValue: 'en-GB'},
+  ],
+})
+export class CommonMaterialModule {
+}
+
+/*
+ *备注
+ */
+// Whichever approach you use, be sure to import the Angular
+// Material modules after Angular's BrowserModule, as the
+// import order matters for NgModules.

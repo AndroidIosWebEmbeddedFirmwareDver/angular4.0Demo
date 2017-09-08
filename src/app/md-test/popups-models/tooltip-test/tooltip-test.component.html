@@ -1,0 +1,21 @@
+<p>
+  tooltip-test works!
+</p>
+
+<div>
+
+  <md-card>
+
+    <md-card-content>
+
+      <div class="example-tooltip-host" mdTooltip="Tooltip!" [mdTooltipPosition]="position">
+        <span>Show tooltip</span><br/>
+        <md-select class="example-select" [(ngModel)]="position">
+          <md-option *ngFor="let item of positions" value="{{item.value}}">{{item.name}}</md-option>
+        </md-select>
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>

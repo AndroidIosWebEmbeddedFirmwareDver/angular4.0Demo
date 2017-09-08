@@ -1,0 +1,40 @@
+<p>
+  table-test works!
+</p>
+
+
+<div>
+  <md-card>
+
+    <md-card-content>
+      <!--list-->
+      <!--<md-list dense>-->
+      <!--<md-list-item *ngFor="let item of tables">-->
+      <!--<button md-button (click)="onItemClick(item)">{{item.name}}</button>-->
+      <!--</md-list-item>-->
+      <!--</md-list>-->
+
+      <!--nav tabs with routers-->
+      <nav md-tab-nav-bar>
+        <a md-tab-link
+           *ngFor="let item of tables"
+           [routerLink]="item.link"
+           routerLinkActive #rla="routerLinkActive"
+           [active]="rla.isActive">
+          {{item.name}}
+        </a>
+      </nav>
+      <router-outlet></router-outlet>
+
+      <!--router Demo-->
+      <!--<h1>Angular Router</h1>-->
+      <!--<nav>-->
+      <!--<a routerLink="/md-test/table-test/table-with-filtering" routerLinkActive="active">table-with-filtering</a>-->
+      <!--<a routerLink="/md-test/table-test/table-with-pagination" routerLinkActive="active">table-with-pagination</a>-->
+      <!--</nav>-->
+      <!--<router-outlet></router-outlet>-->
+
+    </md-card-content>
+
+  </md-card>
+</div>

@@ -1,0 +1,5 @@
+@import "../../../md-test/md-test-base.css";
+md-chip {
+  max-width: 200px;
+  text-align: center;
+}

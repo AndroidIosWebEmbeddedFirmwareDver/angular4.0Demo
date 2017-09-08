@@ -1,0 +1,27 @@
+<p>
+  autocomplete-test works!
+</p>
+
+
+<div>
+
+  <md-card>
+    <md-card-content>
+
+      <md-input-container floatPlaceholder="always" class="example-full-width">
+          <input mdInput placeholder="placeholder" [mdAutocomplete]="autocompleteTemplateRefId"
+                 [(ngModel)]="modelName" (ngModelChange)="this.choices = filterChoices(modelName)">
+      </md-input-container>
+
+      <md-autocomplete #autocompleteTemplateRefId="mdAutocomplete"
+                       [displayWith]="onSelectConvertValueToInputFn">
+        <md-option *ngFor="let choice of choices" [value]="choice.value">
+          {{choice.name}}
+        </md-option>
+      </md-autocomplete>
+    </md-card-content>
+
+  </md-card>
+
+
+</div>

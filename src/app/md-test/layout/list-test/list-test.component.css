@@ -1,0 +1,5 @@
+@import "../../../md-test/md-test-base.css";
+
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}

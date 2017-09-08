@@ -1,0 +1,103 @@
+<div class="map">
+
+
+  <md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav">
+
+      <a style="background-color: transparent;width: 100%;text-align: center;">
+        <md-card-header>
+          <div md-card-avatar class="example-header-image"></div>
+          <md-card-title>Shiba Inu</md-card-title>
+          <md-card-subtitle>Dog Breed</md-card-subtitle>
+        </md-card-header>
+      </a>
+
+      <button md-button (click)="sidenav.close()" class="example-button">
+        <md-icon>home</md-icon>
+        系统首页
+      </button>
+      <button md-button color="primary" (click)="sidenav.close()" class="example-button">
+        <md-icon>dialpad</md-icon>
+        实时统计
+      </button>
+      <button md-button color="accent" (click)="sidenav.close()" class="example-button">
+        <md-icon>voicemail</md-icon>
+        智能筛选
+      </button>
+      <button md-button color="warn" (click)="sidenav.close()" class="example-button">
+        <md-icon>business</md-icon>
+        业务管理
+      </button>
+      <button md-button disabled (click)="sidenav.close()" class="example-button">
+        <md-icon>clear_all</md-icon>
+        资料审查
+      </button>
+      <button md-button color="primary" (click)="sidenav.close()" class="example-button">
+        <md-icon>live_help</md-icon>
+        关于我们
+      </button>
+    </md-sidenav>
+
+    <div class="example-sidenav-content">
+      <!--<button type="button" md-button (click)="sidenav.open()">-->
+      <!--Open sidenav-->
+      <!--</button>-->
+      <button type="button" md-button (click)="openDialog()">
+        Open Md-DialogDemo
+      </button>
+      <button md-mini-fab color="#37C6C0" class="example-fab" (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+      </button>
+
+      <!--list demo-->
+      <div hidden>
+        <md-list>
+          <h3 md-subheader>Folders</h3>
+
+          <md-list-item *ngFor="let folder of folders">
+            <md-icon md-list-icon>folder</md-icon>
+            <h4 md-line>{{folder.name}}</h4>
+            <p md-line> {{folder.updated | date}} </p>
+          </md-list-item>
+          <md-divider></md-divider>
+          <h3 md-subheader>Notes</h3>
+          <md-list-item *ngFor="let note of notes">
+            <md-icon md-list-icon>note</md-icon>
+            <h4 md-line>{{note.name}}</h4>
+            <p md-line> {{note.updated | date}} </p>
+          </md-list-item>
+        </md-list>
+      </div>
+      <!--card demo-->
+      <div hidden>
+        <md-card class="example-card">
+          <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>Shiba Inu</md-card-title>
+            <md-card-subtitle>Dog Breed</md-card-subtitle>
+          </md-card-header>
+          <img md-card-image src="assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <md-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </md-card-content>
+          <md-card-actions>
+            <button md-button>LIKE</button>
+            <button md-button>SHARE</button>
+          </md-card-actions>
+        </md-card>
+      </div>
+
+      <div class="example-tooltip-host" mdTooltip="Tooltip!" [mdTooltipPosition]="position">
+        <span>Show tooltip</span>
+        <md-select class="example-select" [(ngModel)]="position">
+          <md-option *ngFor="let state of states" [value]="state.code">{{state.name}}</md-option>
+        </md-select>
+      </div>
+    </div>
+
+  </md-sidenav-container>
+</div>

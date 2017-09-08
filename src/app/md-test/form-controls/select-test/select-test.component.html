@@ -1,0 +1,21 @@
+<p>
+  select-test works!
+</p>
+
+
+<div>
+  <md-card>
+    <md-card-content>
+      <form>
+        <md-select placeholder="Select Your Favorite Food,Please!" [(ngModel)]="selectedValue"
+                   name="food">
+          <md-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </md-option>
+        </md-select>
+
+        <p> Selected value: {{selectedValue}} </p>
+      </form>
+    </md-card-content>
+  </md-card>
+</div>

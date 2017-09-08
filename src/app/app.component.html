@@ -1,0 +1,24 @@
+<div>
+
+  <md-list dense>
+    <md-list-item *ngFor="let item of mdCompontsData">
+
+      <md-card class="example-card">
+        <md-card-header>
+          <md-card-title>{{item.name}}</md-card-title>
+        </md-card-header>
+        <md-card-content>
+          <md-list dense>
+            <md-list-item *ngFor="let itemItem of item.data">
+              <button md-raised-button (click)="onMdCompontsDataItemItemClick(itemItem)"
+                      class="example-button1" color="primary">
+                {{itemItem.name}}
+              </button>
+            </md-list-item>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </md-list-item>
+  </md-list>
+
+</div>

@@ -1,0 +1,4 @@
+@import "../../../md-test/md-test-base.css";
+.mat-sort-header-container {
+  align-items: center;
+}

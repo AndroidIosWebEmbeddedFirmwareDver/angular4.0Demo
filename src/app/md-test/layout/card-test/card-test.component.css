@@ -1,0 +1,10 @@
+@import "../../../md-test/md-test-base.css";
+
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  /*background-image: url('../../../../assets/img/examples/shiba2.jpg');*/
+  background-size: cover;
+}
