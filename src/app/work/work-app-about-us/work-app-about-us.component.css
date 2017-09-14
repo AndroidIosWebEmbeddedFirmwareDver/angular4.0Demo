@@ -1,0 +1,89 @@
+
+.work-app-about-us-root-div {
+  margin: 9.6pt;
+}
+
+.work-app-about-us-root-rules-div {
+  margin: 9.6pt;
+}
+
+.work-app-about-us-div {
+  background-color: white;
+  /*min-height: 400pt;*/
+  margin-bottom: 9.6pt;
+  padding: 2.4pt;
+}
+
+.work-app-about-us-title-div {
+  padding: 2.4pt;
+  background-color: white;
+  margin-bottom: 9.6pt;
+  text-align: right;
+}
+
+.work-app-about-user-title {
+  color: white;
+  background-color: #FF9800;
+}
+
+.work-app-about-usee-title {
+  color: white;
+  background-color: #009688;
+
+}
+
+.work-app-about-us-content-div {
+  text-align: left;
+}
+
+.work-app-about-usee {
+  width: auto;
+  height: auto;
+  margin: 9.6pt;
+  color: black;
+  background-color: white;
+  display: inline-block;
+}
+
+.work-app-about-usee_card {
+  width: 160pt;
+  text-align: center;
+}
+
+.work-app-about-usee_card_header {
+  width: 100%;
+  text-align: left;
+}
+
+.work-app-about-usee_content_img {
+  width: 100%;
+  height: auto;
+
+}
+
+.work-app-about-usee_card_content {
+  width: 100%;
+  text-align: left;
+}
+
+.work-app-about-usee_card_content_div {
+  max-height: 300pt;
+  height: 80pt;
+}
+
+.work-app-about-usee_card_content_div .comment_inner {
+  width: 100%;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 5; /** 显示的行数 **/
+  overflow: hidden; /** 隐藏超出的内容 **/
+}
+
+.work-app-about-usee_card_footer {
+  width: 100%;
+  text-align: right;
+}
+
+

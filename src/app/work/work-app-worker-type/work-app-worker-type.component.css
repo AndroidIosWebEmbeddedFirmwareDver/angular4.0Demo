@@ -1,0 +1,102 @@
+
+.work-app-home-map
+{
+  padding: 4.8pt;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.work-app-home-card {
+  width: 400px;
+  margin: 9.6pt;
+  float: left;
+}
+/*
+Employer 雇主
+Employee 雇员
+*/
+.work-woker_type-div
+{
+  background-color: white;
+  /*min-height: 400pt;*/
+  margin-bottom: 9.6pt;
+  padding: 2.4pt;
+}
+.work-woker_type-title-div
+{
+  padding: 2.4pt;
+  background-color: white;
+  margin-bottom: 9.6pt;
+  text-align: right;
+}
+
+.work-woker_typeer-title
+{
+  color: white;
+  background-color: #FF9800;
+}
+
+.work-woker_typeee-title
+{
+  color: white;
+  background-color: #009688;
+
+}
+.work-woker_type-content-div
+{
+  text-align: left;
+}
+
+.work-woker_typeee
+{
+  width: auto;
+  height: auto;
+  margin: 9.6pt;
+  color: black;
+  background-color: white;
+  display: inline-block;
+}
+
+.work-woker_typeee_card
+{
+  width: 160pt;
+  text-align: center;
+}
+
+.work-woker_typeee_card_header
+{
+  width: 100%;
+  text-align: left;
+}
+.work-woker_typeee_content_img
+{
+  width: 100%;
+  height: auto;
+
+}
+.work-woker_typeee_card_content
+{
+  width: 100%;
+  text-align: left;
+}
+.work-woker_typeee_card_content_div
+{
+  max-height: 300pt;
+  height: 80pt;
+}
+.work-woker_typeee_card_content_div .comment_inner{
+  width: 100%;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 将对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 5; /** 显示的行数 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
+}
+.work-woker_typeee_card_footer
+{
+  width: 100%;
+  text-align: right;
+}
+
+

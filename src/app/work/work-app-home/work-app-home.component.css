@@ -1,0 +1,80 @@
+
+
+.work-app-home-map
+{
+  padding: 4.8pt;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.work-app-home-card {
+  width: 400px;
+  margin: 9.6pt;
+  float: left;
+}
+/*
+Employer 雇主
+Employee 雇员
+*/
+.work-app-home-Employ-div
+{
+  background-color: white;
+  /*min-height: 400pt;*/
+  margin-bottom: 9.6pt;
+  padding: 2.4pt;
+}
+.work-app-home-Employ-title-div
+{
+  padding: 2.4pt;
+  background-color: white;
+  margin-bottom: 9.6pt;
+  text-align: right;
+}
+
+.work-app-home-Employer-title
+{
+  color: white;
+  background-color: #FF9800;
+}
+
+.work-app-home-Employee-title
+{
+  color: white;
+  background-color: #009688;
+
+}
+.work-app-home-Employ-content-div
+{
+  text-align: center;
+}
+
+.work-app-home-Employ-danwei
+{
+  width: 48pt;
+  height: 24pt;
+  margin: 9.6pt;
+  color: black;
+  font-size: 8pt;
+  background-color: #f0f0f0;
+}
+
+.work-app-home-Employer
+{
+  width: 48pt;
+  height: 48pt;
+  margin: 9.6pt;
+  color: white;
+  font-size: 18pt;
+  background-color: #FF9800;
+}
+
+.work-app-home-Employee
+{
+  width: 48pt;
+  height: 48pt;
+  margin: 9.6pt;
+  color: white;
+  font-size: 18pt;
+  background-color: #009688;
+
+}

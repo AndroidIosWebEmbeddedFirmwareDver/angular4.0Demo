@@ -1,0 +1,53 @@
+<p hidden>
+  work-app-worker-type works!
+</p>
+
+
+<div *ngIf="!responValue">
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+<div class="work-app-home-map" *ngIf="responValue">
+  <div class="work-woker_type-content-div">
+    <button md-button (click)="querySysWorkTypeData()">
+      <md-icon class="md-16" color="primary">refresh</md-icon>
+      REFRESH
+    </button>
+    <br>
+    <md-list dense>
+      <md-list-item *ngFor="let item of responValue">
+
+        <div class="work-woker_typeee">
+          <md-card class="work-woker_typeee_card">
+            <md-card-header class="work-woker_typeee_card_header">
+              <md-card-title>{{item.name}}</md-card-title>
+              <md-card-subtitle>上次更新：{{item.modifiedDate}}</md-card-subtitle>
+            </md-card-header>
+            <img mdCardImage class="work-woker_typeee_content_img"
+                 src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505124644348&di=87875c65919cb3e9f55b74472963d8d3&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160307%2F10-16030G33451X7.jpg">
+            <md-card-content class="work-woker_typeee_card_content">
+              <div class="work-woker_typeee_card_content_div">
+                <p class="comment_inner">
+                  {{item.description}}
+                </p>
+              </div>
+            </md-card-content>
+            <md-card-footer class="work-woker_typeee_card_footer">
+              <button md-button (click)="editSysWorkTypeFunction(item)">
+                <md-icon class="md-18">edit</md-icon>
+              </button>
+              <button md-button (click)="deleteSysWorkTypeFunction(item)">
+                <md-icon class="md-18">delete</md-icon>
+              </button>
+            </md-card-footer>
+          </md-card>
+        </div>
+      </md-list-item>
+    </md-list>
+
+    <button md-button (click)="addSysWorkTypeFunction()" class="work-woker_typeee">
+      {{addSysWorkType}}
+    </button>
+  </div>
+
+</div>

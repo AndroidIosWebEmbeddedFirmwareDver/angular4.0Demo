@@ -1,0 +1,18 @@
+
+
+.work-app-sanfang-fuli-map
+{
+  padding: 4.8pt;
+}
+
+.work-app-sanfang-fuli-card {
+  width: 300pt;
+  margin: 9.6pt;
+  float: left;
+}
+
+.work-app-sanfang-fuli-grid-list-item {
+  width: auto;
+  height: 400pt;
+  padding: 9.6pt;
+}

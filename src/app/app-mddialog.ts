@@ -1,7 +1,6 @@
 import {OnInit} from '@angular/core';
 import {MdDialog} from '@angular/material';
 import {MdDialogCommonComponent} from './md-dialog-common/md-dialog-common.component';
-import {AppMdcomponent} from './app-mdcomponent';
 
 
 export class AppMddialog implements OnInit {

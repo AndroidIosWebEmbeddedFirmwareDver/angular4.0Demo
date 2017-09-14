@@ -1,0 +1,65 @@
+<p hidden>
+  work-app-user-statistics works!
+</p>
+<div *ngIf="responValue">
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+<div class="work-user-statistics-map" *ngIf="!responValue">
+
+
+  <div class="work-user-statistics-Employ-title-div">
+
+    <div class="right">
+      <button md-button (click)="onClick" class="work-user-statistics-Employer-title">雇主
+      </button>
+      <button md-button (click)="onClick" class="work-user-statistics-Employee-title">雇员
+      </button>
+    </div>
+  </div>
+  <div class="work-user-statistics-Employ-title-div">
+    <div class="left">
+      <button md-button (click)="onClick" class="work-user-statistics-Employer-title">
+        {{startDate}}
+      </button>
+      <button md-button (click)="onClick" class="work-user-statistics-Employee-title">
+        {{betweenDate}}
+      </button>
+      <button md-button (click)="onClick" class="work-user-statistics-Employee-title">
+        {{endDate}}
+      </button>
+    </div>
+  </div>
+  <div class="work-user-statistics-Employ-div">
+    <button md-button (click)="querySysWorkHomeData()">
+      <md-icon class="md-16" color="primary">refresh</md-icon>
+      新注册
+    </button>
+    <div class="work-user-statistics-Employ-content-div">
+      <button md-button (click)="querySysWorkHomeData()" class="work-user-statistics-Employer">
+        1000
+      </button>
+      <button md-button (click)="querySysWorkHomeData()" class="work-user-statistics-Employee">
+        9000
+      </button>
+    </div>
+
+
+  </div>
+
+  <div class="work-user-statistics-Employ-div">
+    <button md-button (click)="onClick">
+      <md-icon class="md-16" color="primary">refresh</md-icon>
+      活跃
+    </button>
+    <div class="work-user-statistics-Employ-content-div">
+      <button md-button (click)="querySysWorkHomeData()" class="work-user-statistics-Employer">
+        1000
+      </button>
+      <button md-button (click)="querySysWorkHomeData()" class="work-user-statistics-Employee">
+        9000
+      </button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="work-app-about-us-root-div">
+  <md-list dense>
+    <md-list-item *ngFor="let rule of rules">
+      <div class="work-app-about-us-root-rules-div">
+        <md-card>
+          <md-card-content>
+            <div>
+              <p><b><h2>{{rule.name}}</h2></b></p>
+              <md-list dense>
+                <md-list-item *ngFor="let item of rule.datas">
+                  <div class="work-app-about-usee">
+                    <md-card class="work-app-about-usee_card">
+                      <md-card-header class="work-app-about-usee_card_header">
+                        <md-card-title>{{item.name}}</md-card-title>
+                        <md-card-subtitle>{{item.modifiedDate}}</md-card-subtitle>
+                      </md-card-header>
+                      <img mdCardImage class="work-app-about-usee_content_img"
+                           src="{{item.picUrl}}">
+                      <md-card-content class="work-app-about-usee_card_content">
+                        <div class="work-app-about-usee_card_content_div">
+                          <p class="comment_inner">
+                            {{item.description}}
+                          </p>
+                        </div>
+                      </md-card-content>
+                    </md-card>
+                  </div>
+                </md-list-item>
+              </md-list>
+
+            </div>
+          </md-card-content>
+
+        </md-card>
+      </div>
+    </md-list-item>
+  </md-list>
+
+
+</div>

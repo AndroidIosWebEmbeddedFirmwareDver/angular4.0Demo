@@ -1,0 +1,46 @@
+<p hidden>
+  work-app-sanfang-fuli works!
+</p>
+<div *ngIf="!sanfangmeinvresponValue">
+  <md-progress-bar mode="indeterminate" color="accent"></md-progress-bar>
+</div>
+
+<div class="work-app-sanfang-fuli-map">
+
+
+  <div>
+
+    <div *ngIf="sanfangmeinvresponValue">
+      <button md-raised-button (click)="querySanFangTianApiMeinv()">
+        <md-icon class="md-16" color="primary">refresh</md-icon>
+        REFRESH
+      </button>
+      <div *ngIf="sanfangmeinvresponValue.codeStatus">
+        <div *ngIf="sanfangmeinvresponValue.msgStatus">
+          <div *ngIf="sanfangmeinvresponValueList">
+            <br>
+            <md-list dense>
+              <md-list-item *ngFor="let item of sanfangmeinvresponValueList">
+                <div class="work-app-sanfang-fuli-card">
+                  <md-card>
+                    <md-card-header>
+                      <md-card-title>{{item.title}}</md-card-title>
+                      <md-card-subtitle>{{item.ctime}}</md-card-subtitle>
+                    </md-card-header>
+                    <img mdCardImage src="{{item.picUrl}}" title="{{item.picUrl}}">
+                    <md-card-content>
+                      {{item.description}}
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </md-list-item>
+            </md-list>
+          </div>
+        </div>
+      </div>
+      <br>
+
+    </div>
+
+  </div>
+</div>

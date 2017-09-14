@@ -1,0 +1,56 @@
+<div *ngIf="!inTasking" class="work-woker_type_add_div_root">
+  <div class="work-woker_type_add_div_header">
+    <!--标题-->
+    <p class="work-woker_type_add_div_header_title"><b><h3>Edit it below!</h3></b></p>
+    <p>
+      <md-input-container floatPlaceholder="auto" class="example-form">
+        <input mdInput [(ngModel)]="data.name" type="text" #name maxlength="20" required
+               placeholder="Name" class="example-full-width">
+        <md-hint align="end">{{name.value.length}} / 20</md-hint>
+      </md-input-container>
+    </p>
+
+    <p>
+      <md-input-container floatPlaceholder="auto" class="example-form">
+        <textarea mdInput [(ngModel)]="data.description" type="text" #description maxlength="256"
+                  cols="4"
+                  placeholder="Description" required class="example-full-width">
+        </textarea>
+        <md-hint align="end">{{description.value.length}} / 256</md-hint>
+      </md-input-container>
+    </p>
+    <p>
+      <md-input-container floatPlaceholder="auto" class="example-form">
+        <input mdInput [(ngModel)]="data.createdDate" type="text" disabled #createdDate
+               maxlength="20"
+               placeholder="CreatedDate" class="example-full-width">
+        <md-hint align="end">{{createdDate.value.length}} / 20</md-hint>
+      </md-input-container>
+    </p>
+    <p>
+      <md-input-container floatPlaceholder="auto" class="example-form">
+        <input mdInput [(ngModel)]="data.modifiedDate" type="text" disabled #modifiedDate
+               maxlength="20"
+               placeholder="ModifiedDate" class="example-full-width">
+        <md-hint align="end">{{modifiedDate.value.length}} / 20</md-hint>
+      </md-input-container>
+    </p>
+
+  </div>
+  <div class="work-woker_type_add_div_footer">
+
+    <button md-button (click)="editSysWorkTypeFunction(data)">
+      Ok
+      <md-icon class="md-18">check</md-icon>
+    </button>
+    <button md-button (click)="onNoClick()">
+      No Thanks
+      <md-icon class="md-18">close</md-icon>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="inTasking">
+  <md-progress-spinner mode="indeterminate" [strokeWidth]="5" color="primary"></md-progress-spinner>
+</div>
+

@@ -1,0 +1,75 @@
+<p hidden>
+  work-app-home works!
+
+</p>
+
+<div *ngIf="!responValue">
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
+
+<div class="work-app-home-map" *ngIf="responValue">
+
+  <div class="work-app-home-Employ-title-div">
+    <button md-button (click)="onClick" class="work-app-home-Employer-title">雇主</button>
+    <button md-button (click)="onClick" class="work-app-home-Employee-title">雇员</button>
+  </div>
+  <div class="work-app-home-Employ-div">
+    <button md-button (click)="querySysWorkHomeData()">
+      <md-icon class="md-16" color="primary">refresh</md-icon>
+      实时注册量
+    </button>
+    <div class="work-app-home-Employ-content-div">
+      <md-list dense>
+        <md-list-item *ngFor="let item of employer_regist">
+          <button md-button (click)="onClick" class="work-app-home-Employer">{{item}}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+    <div class="work-app-home-Employ-content-div">
+      <md-list dense>
+        <md-list-item *ngFor="let item of employee_regist">
+          <button md-button (click)="querySysWorkHomeData()" class="work-app-home-Employee">{{item
+            }}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+
+    <div class="work-app-home-Employ-content-div" hidden>
+      <md-list dense>
+        <md-list-item *ngFor="let item of employ_danwei">
+          <button md-button (click)="onClick" class="work-app-home-Employ-danwei">{{item}}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+
+  </div>
+
+  <div class="work-app-home-Employ-div">
+    <button md-button (click)="onClick">
+      <md-icon class="md-16" color="primary">refresh</md-icon>
+      实时活跃量
+    </button>
+    <div class="work-app-home-Employ-content-div">
+      <md-list dense>
+        <md-list-item *ngFor="let item of employer_using">
+          <button md-button (click)="onClick" class="work-app-home-Employer">{{item}}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+    <div class="work-app-home-Employ-content-div">
+      <md-list dense>
+        <md-list-item *ngFor="let item of employee_using">
+          <button md-button (click)="onClick" class="work-app-home-Employee">{{item}}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+
+    <div class="work-app-home-Employ-content-div" hidden>
+      <md-list dense>
+        <md-list-item *ngFor="let item of employ_danwei">
+          <button md-button (click)="onClick" class="work-app-home-Employ-danwei">{{item}}</button>
+        </md-list-item>
+      </md-list>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,7 @@
-@import "md-dialog-common/md-dialog-common.component.css";
-
-md-sidenav {
-  min-width: 100pt;
-  max-width: 198pt;
-  width: 15%;
-}
-
+@import "work/work-app-main/work-app-main.component.css";
 
 /*CSS实现div的全屏自适应显示*/
-.map {
+.work-app-map {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -16,91 +9,88 @@ md-sidenav {
   left: 0pt;
   top: 0pt;
   bottom: 0pt;
-  background: #f0f0f0;
   z-index: 0;
   overflow: hidden;
   word-break: break-all;
 }
 
-.example-tab-group {
-  width: 100%;
-  height: 20%;
-  min-height: 48pt;
-  max-height: 48pt;
-  background-color: #37C6C0;
+.work-app-map-back {
+  background:#f0f0f0;
+  position: absolute;
+  right: 0pt;
+  left: 0pt;
+  top: 0pt;
+  bottom: 0pt;
 }
 
-.example-button {
+.work-app-header {
+  height: auto;
   width: 100%;
-  min-height: 48pt;
+  background-color: #3366CC;
+}
+
+.work-app-header md-icon
+{
+  margin-right: 9.6pt;
+}
+.work-app-header a
+{
+  color: white;
+}
+.work-app-header a:active
+{
   color: white;
 }
 
-.example-button1 {
-  margin: 2.4pt;
-}
-.example-container {
-  width: 100%;
+.work-app-map-login {
   height: 100%;
-  background-color: #F0F0F0;
+  width: 100%;
+  position: absolute;
+  right: 0pt;
+  left: 0pt;
+  top: 0pt;
+  bottom: 0pt;
+  z-index: 0;
+  overflow: hidden;
+  word-break: break-all;
 }
-
-
-.example-sidenav-content {
+.work-app-map-login-div {
+  height: 100%;
+  width: 100%;
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
-}
-
-.example-sidenav {
-  background-color: #37C6C0;
-  color: black;
   text-align: center;
 }
 
-
-/*
-*/
+.example-card-onlyforpc {
+  width: 300pt;
+  height: 400pt;
+  max-width: 300pt;
+  max-height: 600pt;
+}
 
 .example-card {
-  width: 400px;
-  margin: 4.8pt;
-  float: left;
+  min-width: 300px;
+  max-width: 500px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
 }
 
-.example-header-image {
-  background-image: url("../assets/img/examples/shiba2.jpg");
-  background-size: cover;
+.example-full-width {
+  width: 100%;
+  margin-bottom: 9.6pt;
 }
 
-
-/*
-*/
-
-.mat-list-icon {
-  color: rgba(0, 0, 0, 0.54);
+.example-button-full-width {
+  width: 100%;
 }
 
-/*
-
- */
-.example-tooltip-host {
-  display: inline-flex;
-  align-items: center;
-  margin: 50px;
-}
-
-.example-select {
-  margin: 0 10px;
-}
-
-/*
-
- */
-.example-fab {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
-  color: #37C6C0;
+.example-md-48{
+  width: 48pt;
+  height: 48pt;
 }

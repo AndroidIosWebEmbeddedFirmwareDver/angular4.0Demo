@@ -1,24 +1,132 @@
-<div>
+<!--<div class="work-app-map">-->
+<div *ngIf="!isBrowseredByPc" class="work-app-map-login">
+  <div class="work-app-map-login-div">
+    <md-card class="example-card-onlyforpc">
+      <img mdCardImage src="../../../../assets/img/static/e21aedfcfdd4a807be46faffdffc29cd.jpg">
+      <md-card-content>
+        <div>
+          <p>SORRY , THIS SITE IS ONLY DESIGNED FOR PC !</p>
+          <button md-button (click)="CloseWebPage()">YES , I GET IT !</button>
+        </div>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
+<div *ngIf="isBrowseredByPc">
+  <div class="work-app-map-back" *ngIf="hadLogined">
+    <div *ngIf="!isJoinAtWorkAppMain">
+      <!--头部-->
+      <!--nav tabs with routers-->
+      <nav md-tab-nav-bar class="work-app-header">
+        <a md-tab-link
+           *ngFor="let item of appWorksFunctions"
+           [routerLink]="item.link"
+           routerLinkActive #rla="routerLinkActive"
+           [active]="rla.isActive">
+          <md-icon>{{item.iconName}}</md-icon>
+          {{item.name}}
+        </a>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
 
-  <md-list dense>
-    <md-list-item *ngFor="let item of mdCompontsData">
+    <div *ngIf="isJoinAtWorkAppMain">
+      <div class="work-app-main-header">
+        <div class="work-app-main-header-left-div">
+          <button md-button (click)="onMenuClick()">
+            <md-icon class="md-18">menu</md-icon>
+            MENU
+          </button>
+        </div>
+        <div class="work-app-main-header-center-div">
+          <button md-button disabled>
+            {{foucsFunctionItem.name}}
+          </button>
+        </div>
 
-      <md-card class="example-card">
-        <md-card-header>
-          <md-card-title>{{item.name}}</md-card-title>
-        </md-card-header>
-        <md-card-content>
-          <md-list dense>
-            <md-list-item *ngFor="let itemItem of item.data">
-              <button md-raised-button (click)="onMdCompontsDataItemItemClick(itemItem)"
-                      class="example-button1" color="primary">
-                {{itemItem.name}}
+        <div class="work-app-main-header-right-div">
+          <button md-icon-button [mdMenuTriggerFor]="menuRef">
+            <md-icon class="md-24">account_circle</md-icon>
+          </button>
+          <md-menu #menuRef="mdMenu">
+            <div class="work-app-main-header-right-div-menu-account-msg">
+              <button md-button disabled>
+                <md-icon class="md-24">account_circle</md-icon>
+                管理员
               </button>
-            </md-list-item>
-          </md-list>
+            </div>
+            <md-list dense class="work-app-main-header-right-div-menu-list">
+              <md-list-item *ngFor="let itemFunction of accountFunctions">
+                <div class="work-app-main-header-right-div-menu-list-item">
+                  <button md-button (click)="onRightAccountMenuClick(itemFunction)">
+                    <md-icon class="md-24">{{itemFunction.iconName}}</md-icon>
+                    {{itemFunction.name}}
+                  </button>
+                </div>
+              </md-list-item>
+            </md-list>
+
+          </md-menu>
+
+        </div>
+
+      </div>
+      <div class="work-app-main-header-null-back">
+      </div>
+      <div class="work-app-main-body">
+
+        <div class="work-app-main-left" *ngIf="showLeft">
+          <div class="list-item-div"
+               *ngFor="let item of appWorksFunctions"
+               [routerLink]="item.link"
+               routerLinkActive="{{item.active}}">
+            <button md-button class="list-item-div-button" (click)="changeFoucsFunctionItem(item)">
+              <md-icon>{{item.iconName}}</md-icon>
+              {{item.name}}
+            </button>
+          </div>
+        </div>
+        <div class="{{contentClass}}">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="work-app-map-login" *ngIf="!hadLogined">
+    <div class="work-app-map-login-div">
+      <md-card class="example-card" hidden>
+        <md-card-content>
+          <div>
+            <md-icon class="example-md-48">account_circle</md-icon>
+          </div>
+          <div class="example-form">
+            <!--<form class="example-form">-->
+            <p>
+              <md-form-field class="example-full-width">
+                <input mdInput [(ngModel)]="account" placeholder="ACCOUNT" type="text">
+                <!--<textarea mdInput placeholder="Account"></textarea>-->
+              </md-form-field>
+              <md-form-field class="example-full-width">
+                <input mdInput [(ngModel)]="password" placeholder="PASSWORD" type="password">
+                <!--<textarea mdInput placeholder="Password"></textarea>-->
+              </md-form-field>
+            </p>
+
+            <!--</form>-->
+          </div>
+          <div>
+            <button md-raised-button color="primary" (click)="sendSysWorkTLoginData()"
+                    class="example-button-full-width">Login
+            </button>
+            <!--<button md-raised-button color="warn" (click)="CloseWebPage()">Cancle</button>-->
+          </div>
         </md-card-content>
+
       </md-card>
-    </md-list-item>
-  </md-list>
+    </div>
+  </div>
 
 </div>

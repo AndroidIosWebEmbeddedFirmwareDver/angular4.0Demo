@@ -1,0 +1,78 @@
+
+.work-user-statistics-map {
+  padding: 4.8pt;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.work-user-statistics-card {
+  width: 400px;
+  margin: 9.6pt;
+  float: left;
+}
+
+/*
+Employer 雇主
+Employee 雇员
+*/
+.work-user-statistics-Employ-div {
+  background-color: white;
+  /*min-height: 400pt;*/
+  margin-bottom: 9.6pt;
+  padding: 2.4pt;
+}
+
+.work-user-statistics-Employ-title-div {
+  padding: 2.4pt;
+  background-color: white;
+  margin-bottom: 9.6pt;
+}
+
+.work-user-statistics-Employ-title-div .left {
+  text-align: left;
+}
+
+.work-user-statistics-Employ-title-div .left div {
+  text-align: left;
+  width: 100%;
+}
+
+.work-user-statistics-Employ-title-div .right {
+  text-align: right;
+}
+
+.work-user-statistics-Employ-title-div .right div {
+  text-align: right;
+  width: 100%;
+}
+
+.work-user-statistics-Employer-title {
+  color: white;
+  background-color: #FF9800;
+}
+
+.work-user-statistics-Employee-title {
+  color: white;
+  background-color: #009688;
+
+}
+
+.work-user-statistics-Employ-content-div {
+  text-align: left;
+  padding: 9.6pt;
+}
+
+.work-user-statistics-Employer {
+  width: 40%;
+  height: 48pt;
+  color: white;
+  background-color: #FF9800;
+}
+
+.work-user-statistics-Employee {
+  width: 40%;
+  height: 48pt;
+  color: white;
+  background-color: #009688;
+
+}
